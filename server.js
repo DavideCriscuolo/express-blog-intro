@@ -5,3 +5,7 @@ Creiamo poi una rotta /api/posts che restituisca un oggetto json con la lista de
 Configuriamo gli asset statici sull’applicazione in modo che si possano visualizzare le immagini associate ad ogni post.
 Testare su postman 
 */
+
+const express = require("express");
+const app = express();
+const port = 3000;
