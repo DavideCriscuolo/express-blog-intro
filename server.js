@@ -15,8 +15,45 @@ app.listen(port, () => {
   console.log(`Il server in ascolto è http://localhost:${port}`);
 });
 
-//Rote
+//Rote home
 
 app.get("/", (req, res) => {
   res.send("Server del mio blog");
+});
+
+//Rote posts
+app.get("/api/posts", (req, res) => {
+  const posts = [
+    {
+      name: "Ciambellone",
+      content: "Contenuto del post 1",
+      image: `http://localhost:${port}/images/ciambellone.jpeg`,
+      tags: ["tag1", "tag2"],
+    },
+    {
+      name: "Cracker Barbabietola",
+      content: "Contenuto del post 2",
+      image: `http://localhost:${port}/images/cracker_barbabietola.jpeg`,
+      tags: ["tag3", "tag4"],
+    },
+    {
+      name: "Pane Fritto Dolce",
+      content: "Contenuto del post 3 ",
+      image: `http://localhost:${port}/images/pane_fritto_dolce.jpeg`,
+      tags: ["tag5", "tag6"],
+    },
+    {
+      name: "Pasta Barbabietola",
+      content: "Contenuto del post 4",
+      image: `http://localhost:${port}/images/pasta_barbabietola.jpeg`,
+      tags: ["tag7", "tag8"],
+    },
+    {
+      name: "Torta Paesana",
+      content: "Contenuto del post 5",
+      image: `http://localhost:${port}/images/torta_paesana.jpeg`,
+      tags: ["tag9", "tag10"],
+    },
+  ];
+  res.json(posts);
 });
