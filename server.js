@@ -12,9 +12,7 @@ const port = 3000;
 
 app.use(express.static("public"));
 app.listen(port, () => {
-  console.log(
-    `Il server in ascolto e attualmente collocato alla porta ${port}`
-  );
+  console.log(`Il server in ascolto è http://localhost:${port}`);
 });
 
 //Rote
