@@ -11,8 +11,14 @@ const app = express();
 const port = 3000;
 
 app.use(express.static("public"));
-app.app.listen(port, (req, res) => {
+app.listen(port, () => {
   console.log(
     `Il server in ascolto e attualmente collocato alla porta ${port}`
   );
+});
+
+//Rote
+
+app.get("/", (req, res) => {
+  res.send("Server del mio blog");
 });
