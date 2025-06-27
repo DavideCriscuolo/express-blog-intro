@@ -10,7 +10,8 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
-app.listen(port, (req, res) => {
+app.use(express.static("public"));
+app.app.listen(port, (req, res) => {
   console.log(
     `Il server in ascolto e attualmente collocato alla porta ${port}`
   );
